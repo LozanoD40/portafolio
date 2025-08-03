@@ -1,6 +1,7 @@
 #header{
     background-color: var(--color-background);
     color: var(--color-text);
+    font-weight: 700;
     position: fixed;
     top: 0;
     width: 100%;
@@ -9,14 +10,17 @@
 
 #header h1{
     color: var(--color-text-altern);
-    font-size: 2.5rem;
+    font-size: clamp(1rem, 5vw, 7rem);
     font-weight: 700;
+    
 }
 
 #header {
     display: flex; 
     justify-content: space-between; /*Ordena los elementos horizontalmente*/
     align-items: center; /*Ordena los elementos verticalmente*/
+    flex-wrap: wrap;
+    row-gap: 1rem;
     padding: 1rem 20px;
 }
 
@@ -27,6 +31,7 @@ nav{
 
 nav a{
     text-decoration: none;
+    font-size: clamp(0.8rem, 1vw, 3rem);
     color: var(--color-text-altern);
     transition: color 0.5s;
     position: relative;
@@ -49,4 +54,11 @@ nav a::after{ /*PseudoElemento*/
 
 nav a:hover::after{
     width: 100%;
+}
+
+.nav-link i {
+  margin-right: 0.5rem;
+  color: var(--color-text-altern); /* o el que prefieras */
+  font-size: 1rem; /* puedes ajustar según el tamaño del texto */
+  vertical-align: middle;
 }
