@@ -1,0 +1,21 @@
+@import "header.css";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+:root{
+  --color-background: rgb(230, 0, 0);
+  --color-text-hover: rgb(10, 10, 10);
+
+  --color-text: rgb(0, 0, 0);
+  --color-text-altern: rgb(255, 255, 255);
+}
+
+
+

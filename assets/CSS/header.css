@@ -1,0 +1,52 @@
+#header{
+    background-color: var(--color-background);
+    color: var(--color-text);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#header h1{
+    color: var(--color-text-altern);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#header {
+    display: flex; 
+    justify-content: space-between; /*Ordena los elementos horizontalmente*/
+    align-items: center; /*Ordena los elementos verticalmente*/
+    padding: 1rem 20px;
+}
+
+nav{
+    display: flex;
+    gap: 2rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--color-text-altern);
+    transition: color 0.5s;
+    position: relative;
+}
+
+nav a:hover{ /*Pseudo-Clase*/
+    color: var(--color-text-hover);
+}
+
+nav a::after{ /*PseudoElemento*/
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--color-text-hover);
+    transition: width 0.5s;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
