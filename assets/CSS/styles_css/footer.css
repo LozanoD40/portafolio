@@ -1,0 +1,20 @@
+.footer_lu {
+  font-size: 1.5rem;
+  display: flex;        /* Activa Flexbox */
+  gap: 7%;            /* Espacio entre enlaces */
+  list-style: none;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer_lu a {
+  color: var(--color-text);
+  background: var(--color-background);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.footer_lu a:hover {
+  background: var(--color-background-altern);
+}

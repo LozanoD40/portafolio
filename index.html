@@ -1,32 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/CSS/styles.css">
+  <link rel="stylesheet" href="assets/CSS/styles_css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <title>Document</title>
 </head>
+<body>
 <header id="header">
   <H1>Portafolio</H1>
 <nav>
   <a class="nav-link" href="#home"><i class="fas fa-home"></i> Home</a>
-  <a class="nav-link" href="#about"><i class="fas fa-user"></i> About me</a>
   <a class="nav-link" href="#proyect"><i class="fas fa-code"></i> Projects</a>
+  <a class="nav-link" href="#reference"><i class="fas fa-user"></i> Reference</a>
   <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
 </nav>
 </header>
-<body>
+<main>
   <section id="home">
-  </section>
-  <section id="about">
+    <div class="contenido">
+      <h2 class="titulo">Acerca de mi</h2>
+      <div id="contenido_home">
+        <img src="assets/imagenes/foto de perfil.jpg" alt="Foto de perfil" id="perfil">
+        <p>¡Hola! Soy <b>Diego Agustin Lozano Mora</b>, un programador en formación apasionado por crear soluciones prácticas y creativas con código.
+      Me interesa el desarrollo web y disfruto transformar ideas en proyectos funcionales.
+      Actualmente me estoy especializando en HTML, CSS y JavaScript, mientras exploro frameworks modernos y buenas prácticas de programación.
+
+        Mi objetivo es crecer como desarrollador fullstack y aportar a proyectos que generen impacto positivo. Soy curioso, autodidacta y me motiva aprender algo nuevo cada día.</p>
+        <ul class="skills">
+        <li class="skill_li">
+          HTML
+        </li>
+        <li class="skill_li">
+          CSS
+        </li>
+        <li class="skill_li">
+          JavaScript
+        </li>
+      </ul>
+      </div>
+    </div>
   </section>
   <section id="proyect">
+    <div class="contenido">
+      <h2 class="titulo">Proyectos</h2>
+      <div class="card_project"><a></a></div>
+      <div class="card_project"><a></a></div>
+      <div class="card_project"><a></a></div>
+      <div class="card_project"><a></a></div>
+    </div>
+  </section>
+  <section id="reference">
+    <div class="contenido">
+      <h2 class="titulo">Referencias</h2>
+      <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptas.</p>
+    </div>
   </section>
   <section id="contact">
+    <div class="contenido">
+      <h2 class="titulo">Contacto</h2>
+      <form action="mailto:tu-correo@ejemplo.com" method="post" enctype="text/plain" class="formulario">
+        <div class="formulario_div">
+        <label for="inpt-nombreUsuario">Nombre:</label> 
+        <input type="text" name="nombreUsuario" class="formulario_input_nm" id="inpt-nombreUsuario" required />
+        <label for="inpt-correoUsuario">Correo electrónico:</label>
+        <input type="email" name="correoUsuario" class="formulario_input_nm" id="inpt-correoUsuario" required />
+        </div> 
+
+        <label for="inpt-asunto">Asunto:</label>
+        <input type="text" name="asunto" class="formulario_input" id="inpt-asunto" required />
+
+        <label for="inpt-descripcion">Descripción:</label>
+        <textarea name="descripcion" class="formulario_input" id="inpt-descripcion" rows="3" required></textarea>
+
+        <button type="submit" class="formulario_enviar">Enviar</button>
+      </form>
+    </div> 
   </section>
-  <section id="footer">
-  </section>
+</main>
+  <footer>
+    <div class="footer" id="footer">
+      <ul class="footer_lu">
+        <li><a href="https://www.facebook.com/diego.lozano.7549"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/diego_lozano_7549/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://github.com/DiegoLozano7549"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.twitter.com/diego_lozano_7549"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/diego-agustin-lozano-mora-474414242/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

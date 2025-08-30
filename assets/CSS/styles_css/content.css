@@ -1,0 +1,90 @@
+/*Body*/
+body {
+  color: var(--color-text);
+  display: flex;
+  justify-content: center; 
+  align-items: left;    
+  min-height: 100%;       
+  background: url(https://www.muyinteresante.com/wp-content/uploads/sites/5/2022/10/13/634835e1acb90.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  flex-direction: column;  
+}
+
+.contenido {
+  padding: 2rem;
+  max-width: 97%;
+  background: var(--color-background-altern);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: justify ;
+  margin: 2rem 0;
+  margin-left: 15px;
+}
+
+.titulo {
+    text-align: center;
+    color: var(--color-text-altern);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+/*Home*/
+#home {
+    padding-top: 120px; 
+}
+
+#perfil{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+#contenido_home{
+  display: grid;
+  grid-template-columns: 1fr 3.5fr 0.5fr;
+  gap: 4rem;  /*espacio entre columnas */
+  align-items: center; /* centra verticalmente */
+  justify-content: space-between;
+}
+
+.skill_li{
+  background-color: var(--color-accent);
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10%;
+  display: flex;
+  margin: 0 0 2.5rem 0;
+}
+/*Proyecto*/
+/*Referencia*/
+
+/*Contactos*/
+.formulario{
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario_input{
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 3px solid var(--color-border);
+  border-radius: 5px;
+}
+
+.formulario_input_nm{
+  min-width: 21rem;
+  max-width: 24rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 3px solid var(--color-border);
+  border-radius: 5px;
+}
+
+.formulario_enviar{
+  padding: 0.5rem;
+  border: 2px solid var(--color-border);
+  border-radius: 5px;
+}
+
