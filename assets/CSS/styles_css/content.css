@@ -58,6 +58,36 @@ body {
   margin: 0 0 2.5rem 0;
 }
 /*Proyecto*/
+.card_project{
+  background-color: var(--color-background-altern);
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 2rem 0;
+}
+.card_project img{
+  align-content: center;
+  width: 100%;
+  height: 100px;
+}
+.card_project a{
+  color: inherit;         
+  text-decoration: none;
+}
+
+.card_project p{
+  font-size: 1rem;
+  text-align: center;
+}
+
+.card_project:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-10px);
+  }
 /*Referencia*/
 
 /*Contactos*/
