@@ -1,7 +1,7 @@
 .footer_lu {
   font-size: 1.5rem;
   display: flex;        /* Activa Flexbox */
-  gap: 7%;            /* Espacio entre enlaces */
+  gap: 13%;            /* Espacio entre enlaces para pantallas grandes */
   list-style: none;
   margin-left: 1rem;
   margin-bottom: 2rem;
@@ -17,4 +17,28 @@
 
 .footer_lu a:hover {
   background: var(--color-background-altern);
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .footer_lu {
+    gap: 4%;  /* Reduce el espacio entre elementos en tablets */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben */
+    justify-content: center; /* Centra los elementos */
+  }
+  
+  .footer_lu a {
+    padding: 0.4rem 0.8rem; /* Reduce un poco el padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer_lu {
+    gap: 2%;  /* Reduce aún más el espacio en móviles */
+  }
+  
+  .footer_lu a {
+    padding: 0.3rem 0.6rem; /* Reduce más el padding en móviles */
+    font-size: 1.2rem; /* Reduce el tamaño de los iconos */
+  }
 }

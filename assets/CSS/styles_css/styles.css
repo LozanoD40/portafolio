@@ -13,13 +13,17 @@
 
 :root{
 --color-background: #0f1117;        /* Fondo general, casi negro */
---color-background-altern: rgba(255, 255, 255, 0.2); /* Fondo general, casi negro */  
+--color-background-altern: rgba(255, 255, 255, 0.1); /* Fondo general, transparente pero oscuro */
 --color-surface: #1c1f26;           /* Superficies como cajas o navbar */
 --color-text: #e0e0e0;              /* Texto principal, gris claro */
 --color-text-altern: #9ca3af;       /* Texto secundario, gris medio */
 --color-text-hover: #3b82f6;        /* Azul claro para hover */
---color-accent: #2563eb;            /* Azul fuerte para detalles */
+--color-accent: #2563eb;            /* Azul fuerte para detalles (barras de progreso, botones) */
 --color-border: #2c2f36;            /* Bordes sutiles */
+--color-error: #dc3545;             /* Rojo para mensajes de error */
+--transition-speed: 0.3s ease;      /* Velocidad de transición */
+--border-radius: 8px;               /* Variable para radios, si la usas */
 }
+
 
 

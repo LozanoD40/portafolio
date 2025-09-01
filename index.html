@@ -6,17 +6,23 @@
   <link rel="stylesheet" href="assets/CSS/styles_css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <title>Document</title>
+  <title>Mi Portafolio</title>
 </head>
 <body>
 <header id="header">
   <H1>Portafolio</H1>
-<nav>
-  <a class="nav-link" href="#home"><i class="fas fa-home"></i> Home</a>
-  <a class="nav-link" href="#proyect"><i class="fas fa-code"></i> Projects</a>
-  <a class="nav-link" href="#reference"><i class="fas fa-user"></i> Reference</a>
-  <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-</nav>
+<button class="hamburger-menu" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="main-nav"> <!-- CLASE main-nav es importante -->
+    <a class="nav-link" href="#home"><i class="fas fa-home"></i> Home</a>
+    <a class="nav-link" href="#skills"><i class="fas fa-hammer"></i> Habilidades</a>
+    <a class="nav-link" href="#proyect"><i class="fas fa-code"></i> Proyectos</a>
+    <a class="nav-link" href="#reference"><i class="fas fa-user"></i> Referencias</a>
+    <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contacto</a>
+  </nav>
 </header>
 <main>
   <section id="home">
@@ -25,37 +31,78 @@
       <div id="contenido_home">
         <img src="assets/imagenes/foto de perfil.jpg" alt="Foto de perfil" id="perfil">
         <p>¡Hola! Soy <b>Diego Agustin Lozano Mora</b>, un programador en formación apasionado por crear soluciones prácticas y creativas con código.
-      Me interesa el desarrollo web y disfruto transformar ideas en proyectos funcionales.
-      Actualmente me estoy especializando en HTML, CSS y JavaScript, mientras exploro frameworks modernos y buenas prácticas de programación.
-
+        Me interesa el desarrollo web y disfruto transformar ideas en proyectos funcionales.
+        <br>Actualmente me estoy especializando en HTML, CSS y JavaScript, mientras exploro frameworks modernos y buenas prácticas de programación.
         Mi objetivo es crecer como desarrollador fullstack y aportar a proyectos que generen impacto positivo. Soy curioso, autodidacta y me motiva aprender algo nuevo cada día.</p>
-        <ul class="skills">
-        <li class="skill_li">
-          HTML
-        </li>
-        <li class="skill_li">
-          CSS
-        </li>
-        <li class="skill_li">
-          JavaScript
-        </li>
-      </ul>
       </div>
     </div>
   </section>
+  <section id="skills" class="skills-section">
+  <div class="contenido"> 
+    <h2 class="titulo">Mis Habilidades</h2>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <h3>HTML</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar html" data-progress="90"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <h3>CSS</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar html" data-progress="85"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <h3>JavaScript</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar html" data-progress="70"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <h3>Node-JS</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar html" data-progress="60"></div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
   <section id="proyect">
-    <div class="contenido">
-      <h2 class="titulo">Proyectos</h2>
-      <div class="card_project"><a href="https://wokwi.com/projects/411097810904869889" target="_blank">
-        <img src="assets/imagenes/worwi_pantalla-lcd-teclado.jpg" alt="Circuito con pantalla lcd y teclado 4x4">
-        <p>Circuito con pantalla lcd y teclado 4x4</p>
-      </a>
+  <div class="contenido">
+    <h2 class="titulo">Proyectos</h2>
+    <div class="projects-container"> <!-- Nuevo contenedor para las tarjetas -->
+      <div class="card_project"> 
+        <div><a href="https://github.com/LozanoD40/landing-page" target="_blank">
+          <img src="assets/imagenes/foto_proyecto1_landing-page.jpg" alt="Imagen de una Landing Page">
+          <p>Una página de presentación personal</p>
+          <p><b>HTML + CSS</b></p>
+        </div>
+      </a></div>
+      <div class="card_project">
+        <div><a href="https://github.com/LozanoD40/Reloj-digital-en-vivo" target="_blank">
+          <img src="assets/imagenes/foto_proyecto2_reloj-digital.jpg" alt=" Imagen de un Reloj Digital">
+          <p>Una página de un reloj digital en vivo</p>
+          <p><b>HTML + CSS + JavaScript</b></p>
+        </a></div>
       </div>
-      <div class="card_project"><a></a></div>
-      <div class="card_project"><a></a></div>
-      <div class="card_project"><a></a></div>
-    </div>
-  </section>
+      <div class="card_project"> 
+        <div><a href="https://github.com/LozanoD40/Calculadora-basica" target="_blank">
+          <img src="assets/imagenes/foto_proyecto3_calculadora-basica.jpg" alt="Imagen de una calculadora">
+          <p>Una página de una calculadora</p>
+          <p><b>HTML + CSS + JavaScript</b></p>
+        </div>
+      </a></div>
+      <div class="card_project"> 
+        <div><a href="https://github.com/LozanoD40/Galeria-de-foto" target="_blank">
+          <img src="assets/imagenes/foto_proyecto4_galeria-de-foto.jpg" alt=" Imagen de una galeria de foto">
+          <p>Una página de una galeria de foto</p>
+          <p><b>HTML + CSS + JavaScript</b></p>
+        </a></div>
+      </div>
+    </div> <!-- Fin del nuevo contenedor -->
+  </div>
+</section>
   <section id="reference">
     <div class="contenido">
       <h2 class="titulo">Referencias</h2>
@@ -63,26 +110,33 @@
     </div>
   </section>
   <section id="contact">
-    <div class="contenido">
-      <h2 class="titulo">Contacto</h2>
-      <form action="mailto:tu-correo@ejemplo.com" method="post" enctype="text/plain" class="formulario">
-        <div class="formulario_div">
-        <label for="inpt-nombreUsuario">Nombre:</label> 
-        <input type="text" name="nombreUsuario" class="formulario_input_nm" id="inpt-nombreUsuario" required />
-        <label for="inpt-correoUsuario">Correo electrónico:</label>
-        <input type="email" name="correoUsuario" class="formulario_input_nm" id="inpt-correoUsuario" required />
-        </div> 
-
-        <label for="inpt-asunto">Asunto:</label>
-        <input type="text" name="asunto" class="formulario_input" id="inpt-asunto" required />
-
-        <label for="inpt-descripcion">Descripción:</label>
-        <textarea name="descripcion" class="formulario_input" id="inpt-descripcion" rows="3" required></textarea>
-
-        <button type="submit" class="formulario_enviar">Enviar</button>
-      </form>
-    </div> 
-  </section>
+  <div class="contenido">
+    <h2 class="titulo">Contacto</h2>
+    <form id="contactForm" class="formulario"> 
+      <div class="form-group"> 
+          <label for="inpt-nombreUsuario">Nombre:</label>
+          <input type="text" name="nombreUsuario" class="formulario_input_nm" id="inpt-nombreUsuario" required />
+          <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+          <label for="inpt-correoUsuario">Email:</label>
+          <input type="email" name="email" class="formulario_input_nm" id="inpt-correoUsuario" required />
+          <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="inpt-asunto">Asunto</label>
+        <input type="text" name="asunto" class="formulario_input_nm" id="inpt-asunto"/>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="inpt-descripcion">Mensaje:</label>
+        <textarea name="mensaje" id="inpt-descripcion" class="formulario_input_ta" required></textarea>
+        <span class="error-message"></span>
+      </div>
+      <button type="submit" class="formulario_enviar">Enviar Mensaje</button>
+    </form>
+  </div>
+</section>
 </main>
   <footer>
     <div class="footer" id="footer">
@@ -96,6 +150,6 @@
       </ul>
     </div>
   </footer>
-  <script src="assets/js/script.js"></script>
+  <script src="assets/javascript/javascript.js"></script>
 </body>
 </html>

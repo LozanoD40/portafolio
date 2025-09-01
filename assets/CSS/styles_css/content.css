@@ -57,22 +57,68 @@ body {
   display: flex;
   margin: 0 0 2.5rem 0;
 }
+/*Habilidades*/
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.skill-item {
+    background-color: var(--color-background-altern);
+    padding: 25px;
+    border-radius: var(--color-border);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.skill-item h3 {
+    margin-bottom: 15px;
+    color: var(--color-text);
+}
+
+.progress-bar-container {
+    background-color: var(--color-border);
+    border-radius: 5px;
+    height: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--color-text-altern);
+    width: 0; /* Se animará con JS */
+    border-radius: 5px;
+    transition: width 1.5s ease-out;
+}
 /*Proyecto*/
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
+}
+
 .card_project{
   background-color: var(--color-background-altern);
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 300px;
   border-radius: 10%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 0 2rem 0;
 }
 .card_project img{
   align-content: center;
-  width: 100%;
-  height: 100px;
+  width: 250px;
+  height: 150px;
+  border-radius: 10%;
 }
 .card_project a{
   color: inherit;         
@@ -88,24 +134,47 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-10px);
   }
+/* Media query para dispositivos pequeños */
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card_project{
+  background-color: var(--color-background-altern);
+  width: 550px;
+  height: 200px;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 2rem 0;
+}
+.card_project img{
+  align-content: center;
+  width: 350px;
+  height: 100px;
+  border-radius: 10%;
+}
+}
 /*Referencia*/
 
 /*Contactos*/
-.formulario{
+.form-group{
   display: flex;
   flex-direction: column;
 }
 
-.formulario_input{
+.formulario_input_nm{
   margin-bottom: 1rem;
   padding: 0.5rem;
   border: 3px solid var(--color-border);
   border-radius: 5px;
 }
 
-.formulario_input_nm{
-  min-width: 21rem;
-  max-width: 24rem;
+.formulario_input_ta{
+  width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem;
   border: 3px solid var(--color-border);
@@ -116,5 +185,16 @@ body {
   padding: 0.5rem;
   border: 2px solid var(--color-border);
   border-radius: 5px;
+  width: 100%;
 }
+
+.error-message{
+  color: var(--color-error);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+
+
+
 
