@@ -12,6 +12,7 @@
 }
 
 :root{
+--background: url("../../imagenes/background-dark.jpg");      /* Fondo general, casi negro */
 --color-background: #0f1117;        /* Fondo general, casi negro */
 --color-background-altern: rgba(255, 255, 255, 0.1); /* Fondo general, transparente pero oscuro */
 --color-surface: #1c1f26;           /* Superficies como cajas o navbar */
@@ -25,5 +26,17 @@
 --border-radius: 8px;               /* Variable para radios, si la usas */
 }
 
+.light-mode {
+  --background: url("../../imagenes/background-light.jpg");        /* Fondo general, casi negro */
+  --color-background: #e4e9ee;        /* Casi blanco */
+  --color-background-altern: rgba(0, 0, 0, 0.05);
+  --color-surface: #ffffff;           /* Tarjetas, navbar */
+  --color-text: #111827;              /* Texto principal, casi negro */
+  --color-text-altern: #374151;       /* Texto secundario */
+  --color-text-hover: #2563eb;        /* Azul consistente */
+  --color-accent: #3b82f6;            /* Azul brillante */
+  --color-border: #d1d5db;            /* Gris suave */
+  --color-error: #dc2626;             /* Rojo para errores */
+}
 
 

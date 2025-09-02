@@ -62,7 +62,20 @@ nav a:hover::after{
   font-size: 1rem; /* puedes ajustar según el tamaño del texto */
   vertical-align: middle;
 }
-/* ... existing code ...*/
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.theme-btn:hover {
+  color: var(--color-text-hover);
+  transform: scale(1.1);
+}
 
 /* Estilos para el menú hamburguesa */
 .hamburger-menu {

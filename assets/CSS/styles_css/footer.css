@@ -19,6 +19,11 @@
   background: var(--color-background-altern);
 }
 
+.footer_p{
+  color: var(--color-text-altern);
+  padding: 0.5rem 1rem;
+}
+
 /* Media queries para pantallas más pequeñas */
 @media (max-width: 768px) {
   .footer_lu {

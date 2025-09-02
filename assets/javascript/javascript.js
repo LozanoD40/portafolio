@@ -1,3 +1,19 @@
+const toggleBtn = document.getElementById("toggleTheme");
+const icon = toggleBtn.querySelector("i");
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    // Cambiar icono entre luna y sol
+    if (document.body.classList.contains("light-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+    } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Menú hamburguesa responsive
     const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -120,36 +136,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener para el envío del formulario
     if (contactForm) {
         contactForm.addEventListener('submit', (event) => {
-            event.preventDefault(); // Detener el envío por defecto
+            event.preventDefault(); // Evita recargar la página
 
             let allFieldsValid = true;
             formInputsConfig.forEach(config => {
-                // Revalidar todos los campos al enviar
                 if (!validateField(config)) {
                     allFieldsValid = false;
                 }
             });
 
             if (allFieldsValid) {
-                // Si todo es válido, puedes enviar el formulario o hacer una petición AJAX
-                alert('¡Formulario enviado con éxito! Nos pondremos en contacto contigo pronto.');
-                // Aquí podrías usar Fetch API para enviar los datos a un servidor:
-                // fetch('tu_api_endpoint.php', {
-                //     method: 'POST',
-                //     body: new FormData(contactForm)
-                // })
-                // .then(response => response.json())
-                // .then(data => {
-                //     console.log('Success:', data);
-                //     alert('¡Formulario enviado con éxito!');
-                //     contactForm.reset(); // Limpiar el formulario
-                // })
-                // .catch((error) => {
-                //     console.error('Error:', error);
-                //     alert('Hubo un error al enviar el formulario.');
-                // });
-                contactForm.reset(); // Limpiar el formulario después de un envío exitoso simulado
-                formInputsConfig.forEach(config => clearError(config.element)); // Limpiar mensajes de error
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            alert('¡Formulario enviado con éxito! Nos pondremos en contacto contigo pronto.');
+                            contactForm.reset(); // Limpiar formulario
+                            formInputsConfig.forEach(config => clearError(config.element)); // Limpiar mensajes de error
+                        } else {
+                            alert('Hubo un problema al enviar el formulario. Inténtalo de nuevo.');
+                        }
+                    })
+                    .catch(() => {
+                        alert('Error de conexión. Inténtalo más tarde.');
+                    });
             } else {
                 alert('Por favor, corrige los errores en el formulario antes de enviar.');
             }
@@ -203,5 +216,83 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+    });
+});
+
+// Código para el carrusel de referencias
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.carousel-slides');
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    const indicators = document.querySelectorAll('.indicator');
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    // Función para mostrar un slide específico
+    function showSlide(index) {
+        if (index < 0) {
+            currentIndex = totalSlides - 1;
+        } else if (index >= totalSlides) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+
+        // Mover el carrusel
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Actualizar indicadores
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    // Event listeners para los botones
+    prevButton.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+    // Event listeners para los indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+
+    // Inicializar el carrusel
+    showSlide(0);
+
+    // Opcional: Autoplay
+    let autoplayInterval;
+
+    function startAutoplay() {
+        autoplayInterval = setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 5000); // Cambiar cada 5 segundos
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoplayInterval);
+    }
+
+    // Iniciar autoplay
+    startAutoplay();
+
+    // Detener autoplay al interactuar con el carrusel
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    prevButton.addEventListener('click', () => {
+        stopAutoplay();
+        setTimeout(startAutoplay, 10000); // Reiniciar después de 10 segundos
+    });
+    nextButton.addEventListener('click', () => {
+        stopAutoplay();
+        setTimeout(startAutoplay, 10000); // Reiniciar después de 10 segundos
     });
 });
