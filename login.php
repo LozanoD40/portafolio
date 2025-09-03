@@ -12,13 +12,15 @@ if (isset($_GET['error'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="assets/CSS/styles_css/styles.css">
     <link rel="stylesheet" href="assets/CSS/styles_css/login.css">
 </head>
-<body class="login-body"> 
+
+<body class="login-body">
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
         <?php if ($error): ?>
@@ -28,6 +30,8 @@ if (isset($_GET['error'])) {
             <div class="form-group">
                 <label for="email">Correo:</label>
                 <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
                 <label for="password">Contraseña:</label>
                 <input type="password" name="password" id="password" required>
             </div>
@@ -35,4 +39,5 @@ if (isset($_GET['error'])) {
         </form>
     </div>
 </body>
+
 </html>

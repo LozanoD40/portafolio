@@ -221,15 +221,15 @@ if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
   <footer>
     <div class="footer" id="footer">
       <ul class="footer_lu">
-        <li><a href="https://www.facebook.com/diego.lozano.7549" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/diego_lozano_7549/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://github.com/DiegoLozano7549" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-        <li><a href="https://www.twitter.com/diego_lozano_7549" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/diego-agustin-lozano-mora-474414242/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="https://www.whatsapp.com/" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+        <li><a href="https://www.facebook.com/notengofacebook" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/notengo" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://github.com/LozanoD40" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.twitter.com/notengotwitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/diego-agustin-lozano-mora-170459382/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://wa.me/593963108812" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
       </ul>
       <hr>
-      <p class="footer_p">Diego Lozano © 2023</p>
+      <p class="footer_p">Diego Lozano © 2025</p>
     </div>
   </footer>
   <script src="assets/javascript/javascript.js"></script>

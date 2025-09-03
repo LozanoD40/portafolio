@@ -302,10 +302,3 @@ body {
   margin-top: 0.2rem;
   margin-bottom: 0.3rem;
 }
-
-.formulario_input_nm:focus,
-.formulario_input_ta:focus {
-  outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 5px var(--color-accent);
-}
