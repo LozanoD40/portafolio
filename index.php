@@ -1,6 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
+    header('Location: login.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +15,26 @@
 
   <title>Mi Portafolio</title>
 </head>
-
 <body>
   <header id="header">
-    <H1>Portafolio</H1>
-    <button class="hamburger-menu" aria-label="Toggle navigation">
+    <h1>Portafolio</h1>
+    <button class="hamburger-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
       <span></span>
       <span></span>
       <span></span>
     </button>
     <nav class="main-nav"> <!-- CLASE main-nav es importante -->
-      <a class="nav-link" href="#home"><i class="fas fa-home"></i>Acerca de</a>
-      <a class="nav-link" href="#skills"><i class="fas fa-hammer"></i> Habilidades</a>
-      <a class="nav-link" href="#proyect"><i class="fas fa-code"></i> Proyectos</a>
-      <a class="nav-link" href="#reference"><i class="fas fa-user"></i> Referencias</a>
-      <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contacto</a>
+      <a class="nav-link" href="#home" aria-label="Inicio"><i class="fas fa-home"></i>Acerca de</a>
+      <a class="nav-link" href="#skills" aria-label="Habilidades"><i class="fas fa-hammer"></i> Habilidades</a>
+      <a class="nav-link" href="#proyect" aria-label="Proyectos"><i class="fas fa-code"></i> Proyectos</a>
+      <a class="nav-link" href="#reference" aria-label="Referencias"><i class="fas fa-user"></i> Referencias</a>
+      <a class="nav-link" href="#contact" aria-label="Contacto"><i class="fas fa-envelope"></i> Contacto</a>
 
-      <button id="toggleTheme" class="theme-btn"><i class="fas fa-moon"></i> </button>
+      <button id="toggleTheme" class="theme-btn" aria-label="Cambiar tema"><i class="fas fa-moon"></i> </button>
+
+      <a href="logout.php" title="Cerrar sesión" aria-label="Cerrar sesión">
+        <i class="fas fa-sign-out-alt"></i>
+      </a>
     </nav>
   </header>
   <main>
@@ -212,19 +221,18 @@
   <footer>
     <div class="footer" id="footer">
       <ul class="footer_lu">
-        <li><a href="https://www.facebook.com/diego.lozano.7549"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/diego_lozano_7549/"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://github.com/DiegoLozano7549"><i class="fab fa-github"></i></a></li>
-        <li><a href="https://www.twitter.com/diego_lozano_7549"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/diego-agustin-lozano-mora-474414242/"><i
-              class="fab fa-linkedin"></i></a></li>
-        <li><a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a></li>
+        <li><a href="https://www.facebook.com/diego.lozano.7549" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/diego_lozano_7549/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://github.com/DiegoLozano7549" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.twitter.com/diego_lozano_7549" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/diego-agustin-lozano-mora-474414242/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.whatsapp.com/" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
       </ul>
       <hr>
       <p class="footer_p">Diego Lozano © 2023</p>
     </div>
   </footer>
   <script src="assets/javascript/javascript.js"></script>
-</body>
 
+</body>
 </html>
