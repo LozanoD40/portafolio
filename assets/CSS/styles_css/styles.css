@@ -11,6 +11,16 @@
   line-height: 1.6;
 }
 
+#main-content {
+  width: 100%;
+  height: 100%;
+} 
+
+#footer-content{
+  width: 100%;
+  height: 100%;
+}
+
 :root{
 --background: url("../../imagenes/background-dark.jpg");      /* Fondo general, casi negro */
 --color-background: #0f1117;        /* Fondo general, casi negro */

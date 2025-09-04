@@ -37,12 +37,12 @@ if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
       </a>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     <section id="home">
-      <div class="contenido">
+      <div class="contenido" id="home_contenido">
         <h2 class="titulo">Acerca de mi</h2>
         <div id="contenido_home">
-          <img src="assets/imagenes/foto de perfil.jpg" alt="Foto de perfil" id="perfil">
+          <img src="assets/imagenes/foto de perfil.jpg" alt="Foto de perfil" id="imagen_home">
           <p>¡Hola! Soy <b>Diego Agustin Lozano Mora</b>, un programador en formación apasionado por crear soluciones
             prácticas y creativas con código.
             Me interesa el desarrollo web y disfruto transformar ideas en proyectos funcionales.
@@ -89,40 +89,44 @@ if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
       <div class="contenido">
         <h2 class="titulo">Proyectos</h2>
         <div class="projects-container">
-          <div class="card_project">
-            <div><a href="https://github.com/LozanoD40/landing-page" target="_blank">
-                <img src="assets/imagenes/foto_proyecto1_landing-page.jpg" alt="Imagen de una Landing Page">
-                <p>Una página de presentación personal</p>
-                <p><b>HTML + CSS</b></p>
-            </div>
-            </a>
+      <div class="card_project">
+        <a href="https://lozanod40.github.io/landing-page/" target="_blank">
+          <div class="card_content">
+            <img src="assets/imagenes/foto_proyecto1_landing-page.jpg" alt="Imagen de una Landing Page">
+            <p>Una página de presentación personal</p>
+            <p><b>HTML + CSS</b></p>
           </div>
-          <div class="card_project">
-            <div><a href="https://github.com/LozanoD40/Reloj-digital-en-vivo" target="_blank">
-                <img src="assets/imagenes/foto_proyecto2_reloj-digital.jpg" alt=" Imagen de un Reloj Digital">
-                <p>Una página de un reloj digital en vivo</p>
-                <p><b>HTML + CSS + JavaScript</b></p>
-            </div>
-            </a>
-          </div>
-          <div class="card_project">
-            <div><a href="https://github.com/LozanoD40/Calculadora-basica" target="_blank">
-                <img src="assets/imagenes/foto_proyecto3_calculadora-basica.jpg" alt="Imagen de una calculadora">
-                <p>Una página de una calculadora</p>
-                <p><b>HTML + CSS + JavaScript</b></p>
-            </div>
-            </a>
-          </div>
-          <div class="card_project">
-            <div><a href="https://github.com/LozanoD40/Galeria-de-foto" target="_blank">
-                <img src="assets/imagenes/foto_proyecto4_galeria-de-foto.jpg" alt=" Imagen de una galeria de foto">
-                <p>Una página de una galería de foto</p>
-                <p><b>HTML + CSS + JavaScript</b></p>
-            </div>
-            </a>
-          </div>
-        </div>
+        </a>
       </div>
+      <div class="card_project">
+        <a href="https://lozanod40.github.io/Reloj-digital-en-vivo/" target="_blank">
+          <div class="card_content">
+            <img src="assets/imagenes/foto_proyecto2_reloj-digital.jpg" alt="Imagen de un Reloj Digital">
+            <p>Una página de un reloj digital en vivo</p>
+            <p><b>HTML + CSS + JavaScript</b></p>
+          </div>
+        </a>
+      </div>
+      <div class="card_project">
+        <a href="https://lozanod40.github.io/Calculadora-basica/" target="_blank">
+          <div class="card_content">
+            <img src="assets/imagenes/foto_proyecto3_calculadora-basica.jpg" alt="Imagen de una calculadora">
+            <p>Una página de una calculadora</p>
+            <p><b>HTML + CSS + JavaScript</b></p>
+          </div>
+        </a>
+      </div>
+      <div class="card_project">
+        <a href="https://lozanod40.github.io/Galeria-de-foto/" target="_blank">
+          <div class="card_content">
+            <img src="assets/imagenes/foto_proyecto4_galeria-de-foto.jpg" alt="Imagen de una galería de fotos">
+            <p>Una página de una galería de fotos</p>
+            <p><b>HTML + CSS + JavaScript</b></p>
+          </div>
+        </a>
+        </div>
+        </div>
+        </div>
     </section>
     <section id="reference">
       <div class="contenido">
@@ -218,7 +222,7 @@ if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
       </div>
     </section>
   </main>
-  <footer>
+  <footer id="footer-content">
     <div class="footer" id="footer">
       <ul class="footer_lu">
         <li><a href="https://www.facebook.com/notengofacebook" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
@@ -233,6 +237,5 @@ if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
     </div>
   </footer>
   <script src="assets/javascript/javascript.js"></script>
-
 </body>
 </html>
