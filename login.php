@@ -16,6 +16,7 @@ if (isset($_GET['error'])) {
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
+    <link rel="icon" href="assets/imagenes/favicon.jpg">
     <link rel="stylesheet" href="assets/CSS/styles_css/styles.css">
     <link rel="stylesheet" href="assets/CSS/styles_css/login.css">
 </head>

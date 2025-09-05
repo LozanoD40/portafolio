@@ -13,6 +13,7 @@ if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
   <link rel="stylesheet" href="assets/CSS/styles_css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <link rel="icon" href="assets/imagenes/favicon.jpg">
   <title>Mi Portafolio</title>
 </head>
 <body>
@@ -229,7 +230,7 @@ if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true) {
         <li><a href="https://www.instagram.com/notengo" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
         <li><a href="https://github.com/LozanoD40" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
         <li><a href="https://www.twitter.com/notengotwitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/diego-agustin-lozano-mora-170459382/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/Diego-Lozano-Mora" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
         <li><a href="https://wa.me/593963108812" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
       </ul>
       <hr>
